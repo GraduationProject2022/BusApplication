@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.SignupActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:fontFamily="@font/biryani_regular"
+        android:gravity="center"
+        android:text="@string/SignUp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_32ssp"
+        android:id="@+id/Signup_tv_title"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Signup_etl_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signup_tv_title"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_64sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:hint="@string/Username"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterTextColor="@android:color/holo_green_dark"
+        app:errorEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Signup_et_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signup_etl_username"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:hintEnabled="true"
+        android:hint="@string/Email"
+        app:counterMaxLength="50"
+        app:counterEnabled="true"
+        app:counterTextColor="@android:color/holo_green_dark"
+        app:errorEnabled="true"
+        android:id="@+id/Signup_etl_email"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Signup_et_email"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signup_etl_email"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:hintEnabled="true"
+        android:hint="@string/password"
+        app:counterMaxLength="50"
+        app:passwordToggleEnabled="true"
+        app:counterEnabled="true"
+        app:counterTextColor="@android:color/holo_green_dark"
+        app:errorEnabled="true"
+        android:id="@+id/Signup_etl_password"
+        app:passwordToggleTint="@android:color/holo_green_dark"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Signup_et_password"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Signup_btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signup_etl_password"
+        android:layout_marginStart="@dimen/_64sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_64sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/SignUp"
+        android:textSize="@dimen/_16ssp"
+        app:cornerRadius="@dimen/_8sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/already_have"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:layout_marginBottom="@dimen/_64sdp"
+        android:id="@+id/Signup_tv_already"
+        />
+
+</RelativeLayout>

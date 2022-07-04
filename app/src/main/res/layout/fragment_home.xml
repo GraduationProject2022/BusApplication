@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ui.fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_32sdp"
+        >
+
+        <TextView
+            android:id="@+id/HomeFragment_tv_admins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/Admins"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/HomeFragment_tv_showall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:layout_toEndOf="@id/HomeFragment_tv_admins"
+            android:fontFamily="@font/aldrich"
+            android:gravity="end"
+            android:text="@string/showall"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HomeFragment_rv_admins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/HomeFragment_tv_admins"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:itemCount="3"
+            tools:listitem="@layout/recyclerview_person" />
+
+
+        <TextView
+            android:id="@+id/HomeFragment_tv_drivers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HomeFragment_rv_admins"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/Drivers"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/HomeFragment_tv_showall2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:layout_toEndOf="@id/HomeFragment_tv_admins"
+            android:fontFamily="@font/aldrich"
+            android:gravity="end"
+            android:text="@string/showall"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_below="@id/HomeFragment_rv_admins"
+            tools:ignore="DuplicateIds"
+            android:visibility="gone"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HomeFragment_rv_drivers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/HomeFragment_tv_drivers"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/recyclerview_person"
+            android:visibility="gone"
+            />
+
+
+        <TextView
+            android:id="@+id/HomeFragment_tv_students"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HomeFragment_rv_drivers"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/aldrich"
+            android:text="@string/Students"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/HomeFragment_tv_showall3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_24sdp"
+            android:layout_toEndOf="@id/HomeFragment_tv_admins"
+            android:fontFamily="@font/aldrich"
+            android:gravity="end"
+            android:text="@string/showall"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_below="@id/HomeFragment_rv_drivers"
+            tools:ignore="DuplicateIds"
+            android:visibility="gone"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/HomeFragment_rv_students"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/HomeFragment_tv_students"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/recyclerview_person"
+            android:visibility="gone"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/HomeFragment_btn_adddrivers"
+            style="@style/splash_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HomeFragment_rv_drivers"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:background="@drawable/loginsignup_button"
+            android:backgroundTint="@color/purple_500"
+            android:text="@string/AddDriver"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            style="@style/splash_buttons"
+            android:layout_below="@id/HomeFragment_btn_adddrivers"
+            android:id="@+id/HomeFragment_btn_addstudents"
+            android:text="@string/AddStudents"
+            android:background="@drawable/loginsignup_button"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:textColor="@color/white"
+            />
+
+
+    </RelativeLayout>
+
+</ScrollView>

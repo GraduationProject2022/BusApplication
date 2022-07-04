@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/SplashActivity_iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_128sdp"
+        android:background="@drawable/logo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SplashActivity_btn_singup"
+        style="@style/splash_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SplashActivity_iv_logo"
+        android:layout_marginTop="@dimen/_64sdp"
+        android:text="@string/SignUp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SplashActivity_btn_singup"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:text="@string/SignIn"
+        android:id="@+id/SplashActivity_btn_singin"
+        style="@style/splash_buttons"
+        />
+
+
+</RelativeLayout>

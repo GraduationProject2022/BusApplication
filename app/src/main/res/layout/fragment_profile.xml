@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ui.fragments.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_16sdp">
+
+
+        <TextView
+            android:id="@+id/ProfileFragment_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:fontFamily="@font/biryani_regular"
+            android:gravity="center"
+            android:text="@string/EditProfile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_32ssp" />
+
+        <ImageView
+            android:id="@+id/ProfileFragment_iv_Profile"
+            android:layout_width="@dimen/_112sdp"
+            android:layout_height="@dimen/_112sdp"
+            android:layout_below="@id/ProfileFragment_tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProfileFragment_iv_Profile"
+            android:layout_marginStart="-32dp"
+            android:layout_marginTop="-32dp"
+            android:id="@+id/ProfileFragment_iv_edit"
+            android:layout_toEndOf="@id/ProfileFragment_iv_Profile"
+            android:background="@drawable/loginsignup_button"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:tint="@color/purple_500" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ProfileFragment_etl_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProfileFragment_iv_Profile"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:hint="@string/Username"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@android:color/darker_gray"
+            app:boxStrokeWidth="@dimen/_2sdp"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:counterTextColor="@android:color/holo_green_dark"
+            app:errorEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ProfileFragment_et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ProfileFragment_etl_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProfileFragment_etl_username"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:hint="@string/Fullname"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@android:color/darker_gray"
+            app:boxStrokeWidth="@dimen/_2sdp"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:counterTextColor="@android:color/holo_green_dark"
+            app:errorEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ProfileFragment_et_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ProfileFragment_etl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProfileFragment_etl_fullname"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:hint="@string/Phone"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@android:color/darker_gray"
+            app:boxStrokeWidth="@dimen/_2sdp"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:counterTextColor="@android:color/holo_green_dark"
+            app:errorEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ProfileFragment_et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ProfileFragment_etl_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProfileFragment_etl_phone"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:hint="@string/Address"
+            app:boxBackgroundColor="@color/white"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+            app:boxCornerRadiusTopStart="@dimen/_8sdp"
+            app:boxStrokeColor="@android:color/darker_gray"
+            app:boxStrokeWidth="@dimen/_2sdp"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:counterTextColor="@android:color/holo_green_dark"
+            app:errorEnabled="true"
+            app:hintEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ProfileFragment_et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Signup_btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ProfileFragment_etl_address"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_64sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_64sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@string/common_google_play_services_update_button"
+            android:textSize="@dimen/_16ssp"
+            app:cornerRadius="@dimen/_8sdp" />
+
+    </RelativeLayout>
+
+</ScrollView>

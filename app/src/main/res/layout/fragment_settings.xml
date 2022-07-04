@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/background_color"
+    tools:context=".ui.ui.fragments.SettingsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/SettingsFragment_iv_Profile"
+            android:layout_width="@dimen/_96sdp"
+            android:layout_height="@dimen/_96sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            app:riv_border_width="@dimen/_2sdp"
+            app:riv_border_color="@color/purple_500"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_iv_Profile"
+            android:id="@+id/SettingsFragment_tv_username"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@string/Username"
+            android:gravity="center"
+            android:textSize="@dimen/_32ssp"
+            android:textColor="@color/purple_500"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_tv_username"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_16ssp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/Email"
+            android:id="@+id/SettingsFragment_tv_email"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SettingsFragment_tv_member"
+            android:layout_below="@id/SettingsFragment_tv_email"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/membersince"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/SettingsFragment_tv_membersince"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_tv_member"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="@string/membersince"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/SettingsFragment_btn_editprofile"
+            style="@style/splash_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_tv_membersince"
+            android:layout_marginTop="@dimen/_49sdp"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawablePadding="-90dp"
+            android:drawableTint="@color/black"
+            android:paddingStart="@dimen/_80sdp"
+            android:text="@string/EditProfile"
+            android:textColor="@color/purple_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/splash_buttons"
+            android:layout_below="@id/SettingsFragment_btn_editprofile"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:id="@+id/SettingsFragment_dkmd"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DarkMode"
+                android:drawableStart="@drawable/ic_baseline_bedtime_24"
+                android:drawableTint="@color/black"
+                android:textColor="@color/black"
+                android:layout_below="@id/SettingsFragment_btn_editprofile"
+                android:layout_centerHorizontal="true"
+                android:textSize="@dimen/_16ssp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:layout_toStartOf="@id/SettingsFragment_sw_dark"
+                />
+
+            <Switch
+                android:id="@+id/SettingsFragment_sw_dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SettingsFragment_btn_editprofile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_32sdp"
+                />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/SettingsFragment_btn_logout"
+            style="@style/splash_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_dkmd"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@android:color/holo_red_dark"
+            android:drawablePadding="-90dp"
+            android:drawableTint="@color/black"
+            android:gravity="center"
+            android:text="@string/Logout"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/_32sdp"
+            />
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_sw_dark"
+            android:layout_marginTop="50dp">
+
+            <RadioButton
+                android:id="@+id/SettingsFragment_rb_en"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/English" />
+
+            <RadioButton
+                android:id="@+id/SettingsFragment_rb_ar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Arabic" />
+        </RadioGroup>
+
+        <!--    <ToggleButton-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content" />-->
+    </RelativeLayout>
+
+</ScrollView>

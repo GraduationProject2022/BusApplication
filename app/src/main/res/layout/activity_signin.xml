@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.SigninActivity">
+
+
+    <TextView
+        android:id="@+id/Signin_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:fontFamily="@font/biryani_regular"
+        android:gravity="center"
+        android:text="@string/SignIn"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_32ssp" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signin_tv_title"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:hintEnabled="true"
+        android:hint="@string/Email"
+        app:counterMaxLength="50"
+        app:counterEnabled="true"
+        app:counterTextColor="@android:color/holo_green_dark"
+        app:errorEnabled="true"
+        android:id="@+id/Signin_etl_email"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Signin_et_email"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signin_etl_email"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:boxStrokeWidth="@dimen/_2sdp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="@dimen/_8sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_8sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_8sdp"
+        app:boxCornerRadiusTopStart="@dimen/_8sdp"
+        app:hintEnabled="true"
+        android:hint="@string/password"
+        app:counterMaxLength="50"
+        app:passwordToggleEnabled="true"
+        app:counterEnabled="true"
+        app:counterTextColor="@android:color/holo_green_dark"
+        app:errorEnabled="true"
+        android:id="@+id/Signin_etl_password"
+        app:passwordToggleTint="@android:color/holo_green_dark"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Signin_et_password"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Signin_btn_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Signin_etl_password"
+        android:layout_marginStart="@dimen/_64sdp"
+        android:layout_marginTop="@dimen/_48sdp"
+        android:layout_marginEnd="@dimen/_64sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/SignIn"
+        android:textSize="@dimen/_16ssp"
+        app:cornerRadius="@dimen/_8sdp" />
+
+    <TextView
+        android:id="@+id/Signin_tv_already"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Signin_btn_signin"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:gravity="center"
+        android:text="@string/ForgetPassword"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp" />
+
+</RelativeLayout>

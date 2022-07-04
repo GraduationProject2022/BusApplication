@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/mainmenu_home"
+        android:title=""
+        android:icon="@drawable/ic_baseline_home_24"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/mainmenu_chat"
+        android:title=""
+        android:icon="@drawable/ic_baseline_chat_24"
+        app:showAsAction="always"
+        />
+
+    <item android:id="@+id/mainmenu_agenda"
+        android:title=""
+        android:icon="@drawable/ic_baseline_calendar_today_24"
+        app:showAsAction="always"
+        />
+
+    <item android:id="@+id/mainmenu_profile"
+        android:title=""
+        android:icon="@drawable/ic_baseline_person_pin_24"
+        app:showAsAction="always"
+        />
+</menu>

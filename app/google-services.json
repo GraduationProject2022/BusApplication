@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034186453462",
+    "project_id": "busapplication-f0066",
+    "storage_bucket": "busapplication-f0066.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034186453462:android:79032b62672a87f3d77477",
+        "android_client_info": {
+          "package_name": "hai2022.team.busapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034186453462-tlm1c1tpo23201o644vc0bq89tusubmu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaqh9-zh0EIXJ77OdE8OBP4pNJtMVVt38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034186453462-tlm1c1tpo23201o644vc0bq89tusubmu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
