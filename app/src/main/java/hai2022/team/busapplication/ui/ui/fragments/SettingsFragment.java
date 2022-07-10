@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
@@ -56,7 +58,10 @@ public class SettingsFragment extends Fragment {
         cloudStorage = new CloudStorage(new StorageListener() {
             @Override
             public void onDownloadImageListener(Uri uri) {
-                Glide.with(getContext()).load(uri).placeholder(R.drawable.profile).into(binding.SettingsFragmentIvProfile);
+                try {
+                    Glide.with(getContext()).load(uri).placeholder(R.drawable.profile).into(binding.SettingsFragmentIvProfile);
+                }catch (Exception e){
+                }
             }
 
             @Override
@@ -80,14 +85,18 @@ public class SettingsFragment extends Fragment {
         binding.SettingsFragmentTvUsername.setText(user.getUsername());
         binding.SettingsFragmentTvEmail.setText(user.getEmail());
         binding.SettingsFragmentTvMembersince.setText(user.getCreated_at());
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         if (user.getImgPath() == null) {
             binding.SettingsFragmentIvProfile.setImageResource(R.drawable.profile);
         } else {
             cloudStorage.download(user.getImgPath());
         }
-        return view;
     }
-
 
     @Override
     public void onStart() {

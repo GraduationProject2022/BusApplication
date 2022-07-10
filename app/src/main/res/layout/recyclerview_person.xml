@@ -31,6 +31,14 @@
             android:text="@string/Username"
             android:textColor="@color/black"
             android:textSize="@dimen/_16ssp" />
+        <ImageButton
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@android:drawable/ic_delete"
+            android:backgroundTint="#2D4CAF50"
+            android:id="@+id/recyclerview_person_btn_delete"
+            android:visibility="gone"
+            />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

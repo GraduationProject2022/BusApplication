@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Bus Now</string>
+    <string name="app_name">Bus Now Admins</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Arabic">Arabic</string>
@@ -9,6 +9,9 @@
     <string name="SignIn">Sign In</string>
     <string name="Username">Username</string>
     <string name="Email">Email</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
     <string name="password">Password</string>
     <string name="already_have">Already Have An Account?</string>
     <string name="ForgetPassword">Forget Passowrd?</string>
@@ -27,4 +30,7 @@
     <string name="Phone">Phone</string>
     <string name="Address">Address</string>
     <string name="About">About</string>
+    <string name="Language">Language</string>
+    <string name="review">Review</string>
+    <string name="Share">Share</string>
 </resources>

@@ -116,6 +116,7 @@ public class ProfileFragment extends Fragment {
     public void onResume() {
         super.onResume();
         editImage();
+
         binding.SignupBtnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

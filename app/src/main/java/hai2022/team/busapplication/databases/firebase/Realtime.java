@@ -48,6 +48,17 @@ public class Realtime {
         });
     }
 
+    public void removeUser(String uid, User user) {
+        Toast.makeText(context, "test" + uid, Toast.LENGTH_SHORT).show();
+// Write a message to the database
+        myRef.child("users").child(user.getType()).child(uid).setValue(null).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                userListiner.ceateuser(task);
+            }
+        });
+    }
+
     public void getUser(String type, String id) {
         myRef.child("users").child(type).child(id).addValueEventListener(new ValueEventListener() {
             @Override
@@ -64,6 +75,7 @@ public class Realtime {
 
     public void getUsers(String type) {
         ArrayList<User> users = new ArrayList<>();
+
         users.add(new User("", R.drawable.ic_baseline_home_24, "Add new " + type, ""));
 
         myRef.child("users").child(type).addValueEventListener(new ValueEventListener() {
@@ -72,6 +84,7 @@ public class Realtime {
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
                     users.add(snapshot1.getValue(User.class));
                 }
+
                 if (type.equalsIgnoreCase("admin"))
                     userListiner.getAdmins(users);
                 else if (type.equalsIgnoreCase("driver"))

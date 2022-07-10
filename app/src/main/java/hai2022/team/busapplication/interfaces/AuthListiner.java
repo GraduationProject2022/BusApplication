@@ -7,6 +7,5 @@ import com.google.firebase.auth.AuthResult;
 
 public interface AuthListiner
 {
-
     void Signup(@NonNull Task<AuthResult> task);
 }

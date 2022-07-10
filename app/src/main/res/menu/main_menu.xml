@@ -13,11 +13,7 @@
         app:showAsAction="always"
         />
 
-    <item android:id="@+id/mainmenu_agenda"
-        android:title=""
-        android:icon="@drawable/ic_baseline_calendar_today_24"
-        app:showAsAction="always"
-        />
+
 
     <item android:id="@+id/mainmenu_profile"
         android:title=""

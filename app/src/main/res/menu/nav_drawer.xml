@@ -6,13 +6,19 @@
             android:title="@string/DarkMode"
             />
         <item android:id="@+id/nav_drawer_language"
-            android:title="@string/Logout"
+            android:title="@string/Language"
             />
     </group>
 
-    <group >
+    <group  >
         <item android:id="@+id/nav_drawer_about"
             android:title="@string/About"
+            />
+        <item android:id="@+id/nav_drawer_review"
+            android:title="@string/review"
+            />
+        <item android:id="@+id/nav_drawer_share"
+            android:title="@string/Share"
             />
         <item android:id="@+id/nav_drawer_logout"
             android:title="@string/Logout"

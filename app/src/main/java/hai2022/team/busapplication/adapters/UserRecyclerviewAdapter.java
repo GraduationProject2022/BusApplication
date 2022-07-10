@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -48,7 +49,6 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
             holder.iv_user.getLayoutParams().width = 200;
         }
         else
-
             holder.iv_user.setImageResource(users.get(position).getImg());
         if (users.get(position).getImg() == 0) {
             holder.iv_user.setImageResource(R.drawable.profile);
@@ -67,6 +67,16 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
             }
         });
 
+        if (users.get(position).getType().equals("driver"))
+        holder.ib_del.setVisibility(View.VISIBLE);
+
+        holder.ib_del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callback.remove_user(users.get(position));
+            }
+        });
+
     }
 
     @Override
@@ -77,6 +87,7 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView iv_user;
         TextView tv_username;
+        ImageButton ib_del;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -85,10 +96,10 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
 
         private void bind(View itemView) {
             iv_user = itemView.findViewById(R.id.recyclerview_person_iv);
+            ib_del = itemView.findViewById(R.id.recyclerview_person_btn_delete);
             tv_username = itemView.findViewById(R.id.recyclerview_person_tv);
             Log.d("bindadapter", "yes");
 
         }
-
     }
 }

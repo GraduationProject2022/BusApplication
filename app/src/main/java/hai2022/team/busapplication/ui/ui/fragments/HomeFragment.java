@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -55,12 +57,13 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         binding = FragmentHomeBinding.inflate(getLayoutInflater());
 
         realtime = new Realtime(getContext(), new UserListiner() {
             @Override
             public void ceateuser(@NonNull Task<Void> task) {
-
+                Toast.makeText(getContext(), "User Removerd Successfully!!!!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -76,9 +79,14 @@ public class HomeFragment extends Fragment {
                     public void user_click_listener(User user) {
                         UserDetailsFragment detailsFragment = new UserDetailsFragment();
                         Bundle b = new Bundle();
-                        b.putSerializable("User" , user);
+                        b.putSerializable("User", user);
                         detailsFragment.setArguments(b);
-                        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container,detailsFragment).commit();
+                        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container, detailsFragment).commit();
+                    }
+
+                    @Override
+                    public void remove_user(User user) {
+
                     }
 
                     @Override
@@ -86,9 +94,13 @@ public class HomeFragment extends Fragment {
                         addUsers(type);
                     }
                 });
-                binding.HomeFragmentRvAdmins.setAdapter(adminsAdapter);
-                binding.HomeFragmentRvAdmins.setLayoutManager(layoutManager);
-                adminsAdapter.notifyDataSetChanged();
+
+                    binding.HomeFragmentRvAdmins.setAdapter(adminsAdapter);
+                    if (binding.HomeFragmentRvAdmins.getLayoutManager() == null)
+                    binding.HomeFragmentRvAdmins.setLayoutManager(layoutManager);
+                    adminsAdapter.notifyDataSetChanged();
+
+
 
             }
 
@@ -100,9 +112,16 @@ public class HomeFragment extends Fragment {
                     public void user_click_listener(User user) {
                         UserDetailsFragment detailsFragment = new UserDetailsFragment();
                         Bundle b = new Bundle();
-                        b.putSerializable("User" , user);
+                        b.putSerializable("User", user);
                         detailsFragment.setArguments(b);
-                        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container,detailsFragment).commit();
+                        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container, detailsFragment).commit();
+                    }
+
+                    @Override
+                    public void remove_user(User user) {
+                        realtime.removeUser(user.getId(),user);
+                        users.remove(user);
+                        driversAdapter.notifyDataSetChanged();
                     }
 
                     @Override
@@ -110,13 +129,16 @@ public class HomeFragment extends Fragment {
                         addUsers(type);
                     }
                 });
-                binding.HomeFragmentRvDrivers.setAdapter(driversAdapter);
-                binding.HomeFragmentRvDrivers.setLayoutManager(layoutManagerDrivers);
-                driversAdapter.notifyDataSetChanged();
-                binding.HomeFragmentRvDrivers.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvDrivers.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvShowall2.setVisibility(View.VISIBLE);
-                binding.HomeFragmentBtnAdddrivers.setVisibility(View.GONE);
+
+                    binding.HomeFragmentRvDrivers.setAdapter(driversAdapter);
+                if (binding.HomeFragmentRvDrivers.getLayoutManager() == null)
+                    binding.HomeFragmentRvDrivers.setLayoutManager(layoutManagerDrivers);
+                    driversAdapter.notifyDataSetChanged();
+                    binding.HomeFragmentRvDrivers.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvDrivers.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvShowall2.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentBtnAdddrivers.setVisibility(View.GONE);
+
             }
 
             @Override
@@ -127,9 +149,14 @@ public class HomeFragment extends Fragment {
                     public void user_click_listener(User user) {
                         UserDetailsFragment detailsFragment = new UserDetailsFragment();
                         Bundle b = new Bundle();
-                        b.putSerializable("User" , user);
+                        b.putSerializable("User", user);
                         detailsFragment.setArguments(b);
-                        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container,detailsFragment).commit();
+                        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container, detailsFragment).commit();
+                    }
+
+                    @Override
+                    public void remove_user(User user) {
+
                     }
 
                     @Override
@@ -137,13 +164,17 @@ public class HomeFragment extends Fragment {
                         addUsers(type);
                     }
                 });
-                binding.HomeFragmentRvStudents.setAdapter(studentsAdapter);
-                binding.HomeFragmentRvStudents.setLayoutManager(layoutManagerStudents);
-                studentsAdapter.notifyDataSetChanged();
-                binding.HomeFragmentRvStudents.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvStudents.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvShowall3.setVisibility(View.VISIBLE);
-                binding.HomeFragmentBtnAddstudents.setVisibility(View.GONE);
+
+                    binding.HomeFragmentRvStudents.setAdapter(studentsAdapter);
+                if (binding.HomeFragmentRvStudents.getLayoutManager() == null)
+                    binding.HomeFragmentRvStudents.setLayoutManager(layoutManagerStudents);
+                    studentsAdapter.notifyDataSetChanged();
+                    binding.HomeFragmentRvStudents.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvStudents.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvShowall3.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentBtnAddstudents.setVisibility(View.GONE);
+
+
             }
 
             @Override
@@ -151,7 +182,8 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        Authentication authentication =new Authentication();
+        Authentication authentication = new Authentication();
+
         realtime.getUsers("admin");
         realtime.getUsers("driver");
         realtime.getUsers("student");
@@ -184,11 +216,11 @@ public class HomeFragment extends Fragment {
         });
     }
 
-    private void addUsers(String type){
+    private void addUsers(String type) {
         AddNewFragment addNewFragment = new AddNewFragment();
         Bundle b = new Bundle();
-        b.putString("type" , type);
+        b.putString("type", type);
         addNewFragment.setArguments(b);
-        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container,addNewFragment).addToBackStack("add").commit();
+        getFragmentManager().beginTransaction().add(R.id.MainActivity_layout_container, addNewFragment).addToBackStack("add").commit();
     }
 }

@@ -44,7 +44,7 @@
             android:background="@drawable/loginsignup_button"
             android:padding="@dimen/_2sdp"
             android:src="@drawable/ic_baseline_edit_24"
-            android:tint="@color/purple_500" />
+            app:tint="@color/purple_500" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ProfileFragment_etl_username"

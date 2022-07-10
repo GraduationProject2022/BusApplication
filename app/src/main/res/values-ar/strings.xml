@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Bus Now</string>
+    <string name="app_name">Bus Now Admins</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Arabic">اللغة العربية</string>
     <string name="English">اللغة الإنجليزية</string>
+
+    <string name="Login">تسجيل الدخول</string>
+    <string name="SignUp">الاشتراك</string>
+    <string name="SignIn">تسجيل الدخول</string>
+    <string name="Username">اسم المستخدم</string>
+    <string name="Email">الايميل</string>
+    <string name="drawer_open">فتح</string>
+    <string name="drawer_close">اغلاق</string>
+
+    <string name="password">كلمة المرور</string>
+    <string name="already_have">بالفعل لديك حساب؟</string>
+    <string name="ForgetPassword">نسيت كلمة المرور</string>
+    <string name="membersince">عضو منذ</string>
+    <string name="EditProfile">تعديل الملف الشخصي</string>
+    <string name="Logout">تسجيل الخروج</string>
+    <string name="DarkMode">الوضع المظلم</string>
+    <string name="Admins">المسؤولين</string>
+    <string name="showall">عرض الكل</string>
+    <string name="Drivers">الشركات</string>
+    <string name="Students">الطلاب</string>
+    <string name="AddNewUser">اضافة مستخدم جديد</string>
+    <string name="AddDriver">اضافة سائقين</string>
+    <string name="AddStudents">اضافة طلاب</string>
+    <string name="Fullname">الاسم الكامل</string>
+    <string name="Phone">رقم الجوال</string>
+    <string name="Address">العنوان</string>
+    <string name="About">حول</string>
+    <string name="Language">اللغة</string>
+    <string name="review">تقييم</string>
+    <string name="Share">مشاركة</string>
 </resources>

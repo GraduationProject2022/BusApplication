@@ -13,15 +13,14 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/SettingsFragment_iv_Profile"
-            android:layout_width="@dimen/_96sdp"
-            android:layout_height="@dimen/_96sdp"
+            android:layout_width="@dimen/_112sdp"
+            android:layout_height="@dimen/_112sdp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/_32sdp"
             android:scaleType="centerCrop"
-            app:riv_oval="true"
-            app:riv_border_width="@dimen/_2sdp"
             app:riv_border_color="@color/purple_500"
-            />
+            app:riv_border_width="@dimen/_2sdp"
+            app:riv_oval="true" />
 
         <TextView
             android:layout_width="match_parent"
@@ -141,6 +140,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/SettingsFragment_sw_dark"
+            android:visibility="gone"
             android:layout_marginTop="50dp">
 
             <RadioButton
