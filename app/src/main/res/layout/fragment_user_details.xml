@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.ui.fragments.UserDetailsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="@dimen/_128sdp"
+        android:layout_height="@dimen/_128sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:src="@drawable/profile"
+        app:riv_oval="true"
+        app:riv_border_width="@dimen/_1sdp"
+        app:riv_border_color="@color/purple_500"
+        android:id="@+id/userDetailsFragment_iv_user"
+        />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_below="@id/userDetailsFragment_iv_user"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:textSize="@dimen/_20ssp"
+        android:text="@string/Username"
+        android:textColor="@color/black"
+        android:id="@+id/userDetailsFragment_tv_name"
+        />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_below="@id/userDetailsFragment_tv_name"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textSize="@dimen/_20ssp"
+        android:text="@string/Phone"
+        android:textColor="@color/black"
+        android:id="@+id/userDetailsFragment_tv_phone"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_below="@id/userDetailsFragment_tv_phone"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textSize="@dimen/_20ssp"
+        android:text="@string/Address"
+        android:textColor="@color/black"
+        android:id="@+id/userDetailsFragment_tv_Address"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_below="@id/userDetailsFragment_tv_Address"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textSize="@dimen/_20ssp"
+        android:text="@string/Email"
+        android:textColor="@color/black"
+        android:id="@+id/userDetailsFragment_tv_Email"
+        />
+
+</RelativeLayout>

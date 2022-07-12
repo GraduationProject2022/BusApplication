@@ -4,24 +4,30 @@
     <group >
         <item android:id="@+id/nav_drawer_darkmode"
             android:title="@string/DarkMode"
+            android:icon="@drawable/ic_baseline_nights_stay_24"
             />
         <item android:id="@+id/nav_drawer_language"
             android:title="@string/Language"
+            android:icon="@drawable/ic_baseline_language_24"
             />
     </group>
 
     <group  >
         <item android:id="@+id/nav_drawer_about"
             android:title="@string/About"
+            android:icon="@drawable/ic_baseline_info_24"
             />
         <item android:id="@+id/nav_drawer_review"
             android:title="@string/review"
+            android:icon="@drawable/ic_baseline_star_rate_24"
             />
         <item android:id="@+id/nav_drawer_share"
             android:title="@string/Share"
+            android:icon="@drawable/ic_baseline_share_24"
             />
         <item android:id="@+id/nav_drawer_logout"
             android:title="@string/Logout"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
             />
     </group>
 </menu>

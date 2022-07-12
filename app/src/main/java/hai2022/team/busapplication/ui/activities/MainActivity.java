@@ -27,6 +27,7 @@ import hai2022.team.busapplication.interfaces.UserListiner;
 import hai2022.team.busapplication.models.User;
 import hai2022.team.busapplication.ui.ui.fragments.HomeFragment;
 import hai2022.team.busapplication.ui.ui.fragments.SettingsFragment;
+import hai2022.team.busapplication.utils.Constants;
 import hai2022.team.busapplication.utils.Utils;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -171,6 +172,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_drawer_darkmode:
+                return true;
+            case R.id.nav_drawer_about:
+                Intent i = new Intent(getBaseContext(),ContainerActivity.class);
+                i.putExtra(Constants.FRAGMENT,Constants.ABOUT_FRAGMENT);
+                startActivity(i);
                 return true;
             case R.id.nav_drawer_logout:
                 authentication.logout();

@@ -11,6 +11,10 @@
     <string name="Email">Email</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="AboutText">bus now A forward vision that has been achieved in our application,
+       through diligent work and renewed thought to create an application that helps university students and bus companies, until now.
+       bus now aims to improve transportation for students in the Gaza Strip by providing a unique and distinguished transportation experience.
+ The bus now is characterized by regularity, and all our buses are characterized by cleanliness safety and ease of use, as they are subject to a security monitoring system.</string>
 
     <string name="password">Password</string>
     <string name="already_have">Already Have An Account?</string>
