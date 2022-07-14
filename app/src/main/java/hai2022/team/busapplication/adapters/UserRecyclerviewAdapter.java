@@ -67,8 +67,12 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
             }
         });
 
-        if (users.get(position).getType().equals("driver"))
-        holder.ib_del.setVisibility(View.VISIBLE);
+        try {
+            if (users.get(position).getType().equals("driver")||users.get(position).getType().equals("student"))
+                holder.ib_del.setVisibility(View.VISIBLE);
+        }catch (Exception e){
+            
+        }
 
         holder.ib_del.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +85,8 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
 
     @Override
     public int getItemCount() {
-        return users.size() < 5 ? users.size() : 5;
+//        return users.size() < 5 ? users.size() : 5;
+        return users.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

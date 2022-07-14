@@ -113,9 +113,17 @@ public class HomeFragment extends Fragment {
 
                     @Override
                     public void remove_user(User user) {
+
                         realtime.removeUser(user.getId(), user);
                         users.remove(user);
                         driversAdapter.notifyDataSetChanged();
+
+                        if (users.size() == 1) {
+                            binding.HomeFragmentRvDrivers.setVisibility(View.GONE);
+                            binding.HomeFragmentTvDrivers.setVisibility(View.GONE);
+                            binding.HomeFragmentTvShowall2.setVisibility(View.GONE);
+                            binding.HomeFragmentBtnAdddrivers.setVisibility(View.VISIBLE);
+                        }
                     }
 
                     @Override
@@ -129,10 +137,18 @@ public class HomeFragment extends Fragment {
                     binding.HomeFragmentRvDrivers.setLayoutManager(layoutManagerDrivers);
                 driversAdapter.notifyDataSetChanged();
 
-                binding.HomeFragmentRvDrivers.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvDrivers.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvShowall2.setVisibility(View.VISIBLE);
-                binding.HomeFragmentBtnAdddrivers.setVisibility(View.GONE);
+
+                if (users.size() == 1 && users.get(0).getUsername().equals("Add new driver")) {
+                    binding.HomeFragmentBtnAdddrivers.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentRvDrivers.setVisibility(View.GONE);
+                    binding.HomeFragmentTvDrivers.setVisibility(View.GONE);
+                    binding.HomeFragmentTvShowall2.setVisibility(View.GONE);
+                } else {
+                    binding.HomeFragmentRvDrivers.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvDrivers.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvShowall2.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentBtnAdddrivers.setVisibility(View.GONE);
+                }
 
 
             }
@@ -148,7 +164,9 @@ public class HomeFragment extends Fragment {
 
                     @Override
                     public void remove_user(User user) {
-
+                        realtime.removeUser(user.getId(), user);
+                        users.remove(user);
+                        studentsAdapter.notifyDataSetChanged();
                     }
 
                     @Override
@@ -161,12 +179,18 @@ public class HomeFragment extends Fragment {
                 if (binding.HomeFragmentRvStudents.getLayoutManager() == null)
                     binding.HomeFragmentRvStudents.setLayoutManager(layoutManagerStudents);
                 studentsAdapter.notifyDataSetChanged();
-                binding.HomeFragmentRvStudents.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvStudents.setVisibility(View.VISIBLE);
-                binding.HomeFragmentTvShowall3.setVisibility(View.VISIBLE);
-                binding.HomeFragmentBtnAddstudents.setVisibility(View.GONE);
 
-
+                if (users.size() == 1 && users.get(0).getUsername().equals("Add new student")) {
+                    binding.HomeFragmentRvStudents.setVisibility(View.GONE);
+                    binding.HomeFragmentTvStudents.setVisibility(View.GONE);
+                    binding.HomeFragmentTvShowall3.setVisibility(View.GONE);
+                    binding.HomeFragmentBtnAddstudents.setVisibility(View.VISIBLE);
+                } else {
+                    binding.HomeFragmentRvStudents.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvStudents.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentTvShowall3.setVisibility(View.VISIBLE);
+                    binding.HomeFragmentBtnAddstudents.setVisibility(View.GONE);
+                }
             }
 
             @Override

@@ -37,4 +37,5 @@
     <string name="Language">Language</string>
     <string name="review">Review</string>
     <string name="Share">Share</string>
+    <string name="EditEmailAndPassword"><![CDATA[Edit email & password]]></string>
 </resources>

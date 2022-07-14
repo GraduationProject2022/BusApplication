@@ -20,11 +20,11 @@ public class Authentication {
     AuthListiner authListiner;
     Context context;
 
-    public Authentication(){
+    public Authentication() {
         this.mAuth = FirebaseAuth.getInstance();
     }
 
-    public Authentication(Context context,AuthListiner authListiner) {
+    public Authentication(Context context, AuthListiner authListiner) {
         this.context = context;
         this.mAuth = FirebaseAuth.getInstance();
         this.authListiner = authListiner;
@@ -49,12 +49,31 @@ public class Authentication {
         });
     }
 
+    public void EditEmailAndPass(String email, String password) {
+        if (!email.equals("")) {
+            firebaseUser().updateEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    authListiner.editInfo(task, "email");
+                }
+            });
+        }
+        if (!password.equals("")) {
+            firebaseUser().updatePassword(password).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    authListiner.editInfo(task, "password");
+                }
+            });
+        }
+    }
+
     public FirebaseUser firebaseUser() {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         return currentUser;
     }
 
-    public void logout(){
+    public void logout() {
         mAuth.signOut();
     }
 

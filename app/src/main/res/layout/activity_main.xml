@@ -7,6 +7,7 @@
     tools:context=".ui.activities.MainActivity"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
+    android:background="?attr/background_color"
     >
 
         <LinearLayout
@@ -21,12 +22,12 @@
                     android:id="@+id/maintoolbar"
                     />
 
-                <FrameLayout
-                    android:id="@+id/MainActivity_layout_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_above="@id/MainActivity_bnv"
-                    android:layout_below="@id/maintoolbar" />
+                        <FrameLayout
+                            android:id="@+id/MainActivity_layout_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_above="@id/MainActivity_bnv"
+                            android:layout_below="@id/maintoolbar" />
 
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/MainActivity_bnv"

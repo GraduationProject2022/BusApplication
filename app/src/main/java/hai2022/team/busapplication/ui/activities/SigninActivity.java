@@ -51,6 +51,11 @@ public class SigninActivity extends AppCompatActivity {
                 }
             }
 
+            @Override
+            public void editInfo(@NonNull Task<Void> task, String edit) {
+
+            }
+
         });
 
         signin();

@@ -109,6 +109,11 @@ public class AddNewFragment extends Fragment {
 
                         }
                     }
+
+                    @Override
+                    public void editInfo(@NonNull Task<Void> task, String edit) {
+
+                    }
                 });
 
                 authentication.Signup(email, password);

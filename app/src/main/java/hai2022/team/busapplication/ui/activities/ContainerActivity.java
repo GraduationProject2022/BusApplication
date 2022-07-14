@@ -12,6 +12,7 @@ import android.widget.Toolbar;
 import hai2022.team.busapplication.R;
 import hai2022.team.busapplication.databinding.ActivityContainerBinding;
 import hai2022.team.busapplication.ui.ui.fragments.AboutFragment;
+import hai2022.team.busapplication.ui.ui.fragments.EditEmailAndPasswordFragment;
 import hai2022.team.busapplication.ui.ui.fragments.ProfileFragment;
 import hai2022.team.busapplication.ui.ui.fragments.UserDetailsFragment;
 import hai2022.team.busapplication.utils.Constants;
@@ -45,8 +46,9 @@ public class ContainerActivity extends AppCompatActivity implements ProfileFragm
             b.putSerializable("User", bundle.getSerializable("User"));
             detailsFragment.setArguments(b);
             getSupportFragmentManager().beginTransaction().replace(R.id.ContainerActivity_container, detailsFragment).commit();
+        }else if(name.equals(Constants.EDIT_EMAIL_AND_PASSWORD_FRAGMENT)){
+            getSupportFragmentManager().beginTransaction().replace(R.id.ContainerActivity_container, EditEmailAndPasswordFragment.newInstance()).commit();
         }
-
     }
 
     @Override

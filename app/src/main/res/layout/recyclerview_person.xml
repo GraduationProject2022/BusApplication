@@ -5,6 +5,7 @@
     android:layout_height="@dimen/_148sdp"
     app:cardElevation="@dimen/_8sdp"
     app:cardUseCompatPadding="true"
+    android:background="?attr/background_color"
     >
 
     <RelativeLayout

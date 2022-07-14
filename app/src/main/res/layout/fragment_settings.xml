@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="?attr/background_color"
-    tools:context=".ui.ui.fragments.SettingsFragment">
+    tools:context=".ui.ui.fragments.SettingsFragment"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -81,11 +82,21 @@
             android:text="@string/EditProfile"
             android:textColor="@color/purple_500" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/SettingsFragment_btn_editemailandpass"
+            style="@style/splash_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/SettingsFragment_btn_editprofile"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/EditEmailAndPassword"
+            android:textColor="@color/purple_500" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/splash_buttons"
-            android:layout_below="@id/SettingsFragment_btn_editprofile"
+            android:layout_below="@id/SettingsFragment_btn_editemailandpass"
             android:layout_marginTop="@dimen/_16sdp"
             android:id="@+id/SettingsFragment_dkmd"
             >
@@ -139,7 +150,6 @@
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/SettingsFragment_sw_dark"
             android:visibility="gone"
             android:layout_marginTop="50dp">
 
@@ -156,9 +166,6 @@
                 android:text="@string/Arabic" />
         </RadioGroup>
 
-        <!--    <ToggleButton-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content" />-->
     </RelativeLayout>
 
 </ScrollView>

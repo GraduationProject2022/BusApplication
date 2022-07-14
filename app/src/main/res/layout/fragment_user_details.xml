@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ui.fragments.UserDetailsFragment">
+    tools:context=".ui.ui.fragments.UserDetailsFragment"
+    android:background="?attr/background_color"
+    >
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:layout_width="@dimen/_128sdp"

@@ -76,11 +76,12 @@ public class Realtime {
     public void getUsers(String type) {
         ArrayList<User> users = new ArrayList<>();
 
-        users.add(new User("", R.drawable.ic_baseline_home_24, "Add new " + type, ""));
-
         myRef.child("users").child(type).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                users.removeAll(users);
+                users.add(new User("", R.drawable.ic_baseline_home_24, "Add new " + type, ""));
+
                 for (DataSnapshot snapshot1 : snapshot.getChildren()) {
                     users.add(snapshot1.getValue(User.class));
                 }

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ui.fragments.HomeFragment">
+    tools:context=".ui.ui.fragments.HomeFragment"
+    android:background="?attr/background_color"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -158,7 +160,7 @@
             style="@style/splash_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/HomeFragment_rv_drivers"
+            android:layout_below="@id/HomeFragment_rv_admins"
             android:layout_marginTop="@dimen/_32sdp"
             android:background="@drawable/loginsignup_button"
             android:backgroundTint="@color/purple_500"
@@ -166,17 +168,16 @@
             android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/HomeFragment_btn_addstudents"
+            style="@style/splash_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/purple_500"
-            style="@style/splash_buttons"
             android:layout_below="@id/HomeFragment_btn_adddrivers"
-            android:id="@+id/HomeFragment_btn_addstudents"
-            android:text="@string/AddStudents"
-            android:background="@drawable/loginsignup_button"
             android:layout_marginTop="@dimen/_32sdp"
-            android:textColor="@color/white"
-            />
+            android:background="@drawable/loginsignup_button"
+            android:backgroundTint="@color/purple_500"
+            android:text="@string/AddStudents"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>

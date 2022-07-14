@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.SignupActivity">
+    tools:context=".ui.activities.SignupActivity"
+    android:background="?attr/background_color"
+
+    >
 
     <TextView
         android:layout_width="match_parent"

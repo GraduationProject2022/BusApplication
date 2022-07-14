@@ -107,6 +107,7 @@ public class SettingsFragment extends Fragment {
     public void onResume() {
         super.onResume();
         editProfile();
+        editEmailAndPassword();
         logout();
     }
 
@@ -117,6 +118,18 @@ public class SettingsFragment extends Fragment {
                 Intent intent = new Intent(getContext(), ContainerActivity.class);
                 intent.putExtra("User", user);
                 intent.putExtra("Fragment", Constants.PROFILE_FRAGMENT);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void editEmailAndPassword() {
+        binding.SettingsFragmentBtnEditemailandpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ContainerActivity.class);
+//                intent.putExtra("User", user);
+                intent.putExtra("Fragment", Constants.EDIT_EMAIL_AND_PASSWORD_FRAGMENT);
                 startActivity(intent);
             }
         });
