@@ -34,7 +34,11 @@ public class SplashActivity extends AppCompatActivity {
         // To Apply Sound and Animation Effects
         applyEffects();
         //To check if the user Logged in
-        isLogged();
+        try {
+            isLogged();
+        }catch (Exception e){
+
+        }
 
 
 

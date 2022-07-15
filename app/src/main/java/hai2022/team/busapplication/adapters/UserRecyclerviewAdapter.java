@@ -70,6 +70,11 @@ public class UserRecyclerviewAdapter extends RecyclerView.Adapter<UserRecyclervi
         try {
             if (users.get(position).getType().equals("driver")||users.get(position).getType().equals("student"))
                 holder.ib_del.setVisibility(View.VISIBLE);
+            if (users.get(position).getType().equals("driver")){
+                holder.iv_user.setImageResource(R.drawable.drivers);
+            }else if (users.get(position).getType().equals("student")){
+                holder.iv_user.setImageResource(R.drawable.student);
+            }
         }catch (Exception e){
             
         }
