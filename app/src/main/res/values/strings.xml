@@ -38,4 +38,6 @@
     <string name="review">Review</string>
     <string name="Share">Share</string>
     <string name="EditEmailAndPassword"><![CDATA[Edit email & password]]></string>
+    <string name="RYWant">Do you want to Exit?</string>
+    <string name="RYWantLog">Do you want to Logout?</string>
 </resources>

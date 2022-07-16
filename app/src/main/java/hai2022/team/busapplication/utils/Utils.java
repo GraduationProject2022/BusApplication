@@ -10,6 +10,9 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import hai2022.team.busapplication.R;
@@ -42,6 +45,12 @@ public class Utils {
         Intent intent = new Intent(context, activity);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+    }
+
+    public static String getDateTime() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = new Date();
+        return dateFormat.format(date);
     }
 
 }

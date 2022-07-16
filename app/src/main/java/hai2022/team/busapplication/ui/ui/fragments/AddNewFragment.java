@@ -103,7 +103,7 @@ public class AddNewFragment extends Fragment {
                         if (task.isSuccessful()) {
 
                             task.getResult().getUser().updateProfile(new UserProfileChangeRequest.Builder().setDisplayName(type).build());
-                            realtime.createUser(task.getResult().getUser().getUid(), new User(task.getResult().getUser().getUid(), binding.AddNewEtUsername.getText().toString(), "admin", task.getResult().getUser().getEmail().toString(), "", "", type, "2/2/2022", "2/2/2022"));
+                            realtime.createUser(task.getResult().getUser().getUid(), new User(task.getResult().getUser().getUid(), binding.AddNewEtUsername.getText().toString(), "admin", task.getResult().getUser().getEmail().toString(), "", "", type, Utils.getDateTime(), Utils.getDateTime()));
                             getActivity().finishAffinity();
                             startActivity(new Intent(getContext(), SigninActivity.class));
 

@@ -77,7 +77,7 @@ public class SignupActivity extends AppCompatActivity {
             public void Signup(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     task.getResult().getUser().updateProfile(new UserProfileChangeRequest.Builder().setDisplayName("admin").build());
-                    realtime.createUser(task.getResult().getUser().getUid(), new User(task.getResult().getUser().getUid(), "admin", "admin", task.getResult().getUser().getEmail().toString(), "", "", "admin", "2/2/2022", "2/2/2022"));
+                    realtime.createUser(task.getResult().getUser().getUid(), new User(task.getResult().getUser().getUid(), "admin", "admin", task.getResult().getUser().getEmail().toString(), "", "", "admin", Utils.getDateTime(), Utils.getDateTime()));
                 } else {
 
                 }
